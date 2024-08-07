@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import SideBar from "./sidebar";
-import { generateResponse, uploadImage, uploadPDF } from '../services/apiServices';
-import "./home.css"
+import SideBar from "../SideBar";
+import { generateResponse, uploadImage, uploadPDF } from '../../services/apiServices';
+import "./index.css"
  
-
-
 export const Home = () =>{
     const [input, setInput] = useState('');
     const [response, setResponse] = useState('');
