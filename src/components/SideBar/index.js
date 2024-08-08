@@ -25,21 +25,13 @@ const SideBar = ({ isExpanded, onChangesidebar }) => {
             {isExpanded && <h1 className="pop-heading">PopAi</h1>}
           </div>
           <div className="icons">
-            <div className="sidebar-item chat-icon">
+            <div className="sidebar-item chat-icon blue-icon">
               <CiSquarePlus className="nav-item-mobile-link" />
               {isExpanded && <p className="sidebar-description">New Chat</p>}
             </div>
             <div className="sidebar-item">
               <FaRegFilePdf className="nav-item-mobile-link" />
               {isExpanded && <p className="sidebar-description">Chat PDF</p>}
-            </div>
-            <div className="sidebar-item">
-              <TfiWrite className="nav-item-mobile-link" />
-              {isExpanded && <p className="sidebar-description">AI Presentation</p>}
-            </div>
-            <div className="sidebar-item">
-              <TfiPencilAlt className="nav-item-mobile-link" />
-              {isExpanded && <p className="sidebar-description">AI Writer</p>}
             </div>
             <div className="sidebar-item">
               <BsPersonWorkspace className="nav-item-mobile-link" />
@@ -52,7 +44,7 @@ const SideBar = ({ isExpanded, onChangesidebar }) => {
           </div>
         </div>
         <div className="sidebar-item last-item">
-            {!isExpanded && <CgProfile className="nav-item-mobile-link" />}   
+        {!isExpanded && <CgProfile className="nav-item-mobile-link" />}   
         </div>
         {isExpanded && <div className="sidebar-footer">
           <button className="sidebar-button">Sign up / Log in</button>
