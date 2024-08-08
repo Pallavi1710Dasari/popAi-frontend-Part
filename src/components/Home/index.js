@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import SideBar from "../SideBar";
+import Header from "../Header"
 import { generateResponse, uploadImage, uploadPDF } from '../../services/apiServices';
 import { BsSendFill } from "react-icons/bs";
 import { PiImageThin } from 'react-icons/pi';
@@ -23,7 +24,7 @@ export const Home = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitted(!isSubmitted);
+    setIsSubmitted(true);
     try {
       const res = await generateResponse([{ role: 'user', content: [{ type: 'text', text: input }] }]);
       setResponse(res.response);
@@ -82,6 +83,8 @@ export const Home = () => {
         <SideBar onChangesidebar={onChangesidebar} isExpanded={isExpanded} />
       </div>
       <div className={containerClassName}>
+        <Header/>
+        <p className='chat-line'>CHAT WITH DOCUMENT</p>
         <form onSubmit={handleSubmit}>
           <div className='input-container'>
             <textarea

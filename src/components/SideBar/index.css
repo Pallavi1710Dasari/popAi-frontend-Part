@@ -25,7 +25,7 @@
 .card-icons {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   height: calc(100% - 60px); /* Adjust height to leave space for the footer */
 }
 
